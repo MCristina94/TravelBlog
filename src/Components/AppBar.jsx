@@ -21,10 +21,10 @@ const AppAppBar = () => {
           transform: "translateX(-50%)",
           marginY: "40px",
           borderRadius: "15px",
-          background: "rgba(255, 255, 255, 0.2)", // Transparente
-          backdropFilter: "blur(10px)", // Desenfoque
-          WebkitBackdropFilter: "blur(10px)", // Para Safari
-          boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)", // Sombra suave
+          background: "rgba(255, 255, 255, 0.2)",
+          backdropFilter: "blur(10px)",
+          WebkitBackdropFilter: "blur(10px)",
+          boxShadow: "0 1px 10px 0 rgba(31, 38, 135, 0.37)",
           border: "1px solid rgba(255, 255, 255, 0.18)",
         }}
       >
@@ -52,28 +52,28 @@ const AppAppBar = () => {
               Travel's Blog
             </Typography>
             <Typography
-              variant="h6"
+              variant="regular"
               component="div"
               sx={{ flexGrow: 1, color: "black", marginX: "10px" }}
             >
               Pictures
             </Typography>
             <Typography
-              variant="h6"
+              variant="regular"
               component="div"
               sx={{ flexGrow: 1, color: "black", marginX: "10px" }}
             >
               Review
             </Typography>
             <Typography
-              variant="h6"
+              variant="regular"
               component="div"
               sx={{ flexGrow: 1, color: "black", marginX: "10px" }}
             >
               Tips
             </Typography>
             <Typography
-              variant="h6"
+              variant="regular"
               component="div"
               sx={{ flexGrow: 1, color: "black", marginX: "10px" }}
             >

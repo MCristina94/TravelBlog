@@ -1,0 +1,115 @@
+{
+  "cities": [
+    {
+      "id": 0,
+      "ciudad": "Brooklyn, Nueva York, EE. UU.",
+      "coordenadas": "40°39′03″N 73°56′59″O.",
+      "idioma": "English",
+      "modena": "USD",
+      "zonaHoraria": " (EST), UTC-5. In Summer EDT), UTC-4. ",
+      "foto": "https://images.unsplash.com/photo-1571951103752-53c15cad28e5?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "informacion": "Brooklyn, vibrante distrito de Nueva York, deslumbra con su rica oferta culinaria, desde clásicas pizzerías hasta restaurantes de alta cocina en Williamsburg. Sumérgete en su cultura visitando el Museo de Brooklyn y el del Tránsito. No te pierdas sitios icónicos como el Puente de Brooklyn, Coney Island y Prospect Park, ideales para pasear y disfrutar del ambiente. Explora barrios únicos como DUMBO, con sus vistas impresionantes, y Bushwick, conocido por su arte urbano y murales coloridos. Brooklyn ofrece una excelente conectividad mediante el metro, facilitando el acceso a sus diversas zonas. Encontrarás desde hoteles boutique hasta cómodos alojamientos en Airbnb. La ciudad es generalmente segura, pero toma precauciones básicas. Desde tiendas de diseño hasta mercados vintage, Brooklyn tiene algo para cada visitante. Consulta eventos locales para enriquecer tu experiencia."
+    },
+    {
+      "id": 1,
+      "ciudad": "Seville, Spain",
+      "coordenadas": "37.3828° N, 5.9732° W",
+      "idioma": "Spanish",
+      "modena": "Euro (EUR)",
+      "zonaHoraria": "CET (UTC+1)",
+      "foto": "https://images.unsplash.com/photo-1618503551238-7df2c50d2236?q=80&w=1923&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "informacion": "Seville is known for its rich history, flamenco dancing, and stunning architecture. Key attractions include the Seville Cathedral, the Alcázar palace, and the Plaza de España."
+    },
+    {
+      "id": 2,
+      "ciudad": "Dubai, UAE",
+      "coordenadas": "25.2048° N, 55.2708° E",
+      "idioma": "Arabic",
+      "modena": "United Arab Emirates Dirham (AED)",
+      "zonaHoraria": "GST (UTC+4)",
+      "foto": "https://images.unsplash.com/photo-1562595410-2cb999af24b5?q=80&w=1926&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "informacion": "Dubai is a modern city famous for its luxury shopping, futuristic architecture, and lively nightlife. Major landmarks include the Burj Khalifa, the Dubai Mall, and Palm Jumeirah."
+    },
+    {
+      "id": 3,
+      "ciudad": "Toronto, ON, Canada",
+      "coordenadas": "43.6532° N, 79.3832° W",
+      "idioma": "English",
+      "modena": "Canadian Dollar (CAD)",
+      "zonaHoraria": "EST (UTC-5)",
+      "habitantes": "Approximately 2.9 million",
+      "foto": "https://images.unsplash.com/photo-1588733103629-b77afe0425ce?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "informacion": "Toronto is a diverse and vibrant city with a thriving arts scene, excellent dining, and numerous parks. Key attractions include the CN Tower, the Royal Ontario Museum, and the Distillery District."
+    },
+    {
+      "id": 4,
+      "ciudad": "Brooklyn, New York, USA",
+      "coordenadas": "40.6782° N, 73.9442° W",
+      "idioma": "English",
+      "modena": "United States Dollar (USD)",
+      "zonaHoraria": "EST (UTC-5)",
+      "foto": "https://images.unsplash.com/photo-1571951103752-53c15cad28e5?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "informacion": "Brooklyn is a dynamic borough known for its diverse neighborhoods, trendy restaurants, and vibrant arts scene. Popular spots include the Brooklyn Bridge Park, Williamsburg, and Prospect Park."
+    },
+    {
+      "id": 5,
+      "ciudad": "Chicago, United States",
+      "coordenadas": "41.8781° N, 87.6298° W",
+      "idioma": "English",
+      "modena": "United States Dollar (USD)",
+      "zonaHoraria": "CST (UTC-6)",
+      "foto": "https://images.unsplash.com/photo-1508030358362-c071fa056233?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "informacion": "Chicago is famous for its bold architecture, rich cultural attractions, and deep-dish pizza. Major landmarks include Millennium Park, the Art Institute of Chicago, and Navy Pier."
+    },
+    {
+      "id": 6,
+      "ciudad": "Florence, Italy",
+      "coordenadas": "43.7696° N, 11.2558° E",
+      "idioma": "Italian",
+      "modena": "Euro (EUR)",
+      "zonaHoraria": "CET (UTC+1)",
+      "foto": "https://plus.unsplash.com/premium_photo-1676289157074-1afc4b1dfdea?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "informacion": "Florence is the birthplace of the Renaissance, known for its art, architecture, and history. Key attractions include the Duomo, the Uffizi Gallery, and the Ponte Vecchio."
+    },
+    {
+      "id": 7,
+      "ciudad": "Amalfi, SA, Italy",
+      "coordenadas": "40.6343° N, 13.1158° E",
+      "idioma": "Italian",
+      "modena": "Euro (EUR)",
+      "zonaHoraria": "CET (UTC+1)",
+      "foto": "https://images.unsplash.com/photo-1612698093158-e07ac200d44e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "informacion": "Amalfi is a picturesque town on the Amalfi Coast, known for its stunning coastal views and historic architecture. Popular attractions include the Amalfi Cathedral and the Emerald Grotto."
+    },
+    {
+      "id": 8,
+      "ciudad": "Burano, Venice, Italy",
+      "coordenadas": "45.4870° N, 12.4137° E",
+      "idioma": "Italian",
+      "modena": "Euro (EUR)",
+      "zonaHoraria": "CET (UTC+1)",
+      "foto": "https://images.unsplash.com/photo-1619090125361-879aba634f8c?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "informacion": "Burano is a colorful island in the Venetian Lagoon, famous for its brightly painted houses and lace making. It's a popular day trip from Venice."
+    },
+    {
+      "id": 9,
+      "ciudad": "Edinburgh, UK",
+      "coordenadas": "55.9533° N, 3.1883° W",
+      "idioma": "English",
+      "modena": "Pound Sterling (GBP)",
+      "zonaHoraria": "BST (UTC+1) during summer, GMT (UTC) during winter",
+      "foto": "https://plus.unsplash.com/premium_photo-1699566448055-671c8dbcc7ee?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fA%3D%3D",
+      "informacion": "Edinburgh is the capital of Scotland, known for its historic Edinburgh Castle, the Royal Mile, and the annual Edinburgh Festival. It offers a mix of medieval charm and modern attractions."
+    },
+    {
+      "id": 10,
+      "ciudad": "Rio de Janeiro, Brazil",
+      "coordenadas": "22.9068° S, 43.1729° W",
+      "idioma": "Portuguese",
+      "modena": "Brazilian Real (BRL)",
+      "zonaHoraria": "BRT (UTC-3)",
+      "foto": "https://images.unsplash.com/photo-1613507681723-252eb6b66967?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fA%3D%3D",
+      "informacion": "Rio de Janeiro is famous for its stunning beaches like Copacabana and Ipanema, the iconic Christ the Redeemer statue, and the vibrant Carnival celebrations. It's a city of natural beauty and cultural richness."
+    }
+  ]
+}
