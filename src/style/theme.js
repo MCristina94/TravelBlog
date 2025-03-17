@@ -25,6 +25,7 @@ export const theme = {
     mourningBlue: "#1A49BB",
     darkBlue: "#211D57",
     veryGray: "#707070",
+    veryGray100: "#ebeef4",
     softYellow: "#F4D059",
     softYellow100: "#F3D159",
     neutralGray00: "#FAFAFA",

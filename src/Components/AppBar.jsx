@@ -51,34 +51,103 @@ const AppAppBar = () => {
             >
               Travel's Blog
             </Typography>
-            <Typography
-              variant="regular"
-              component="div"
-              sx={{ flexGrow: 1, color: "black", marginX: "10px" }}
+            <Box
+              sx={{
+                width: "80px",
+                height: "35px",
+                borderRadius: "10px",
+                alignContent: "center",
+                cursor: "pointer",
+                "&:hover": {
+                  backgroundColor: theme.colors.veryGray100,
+                },
+              }}
             >
-              Pictures
-            </Typography>
-            <Typography
-              variant="regular"
-              component="div"
-              sx={{ flexGrow: 1, color: "black", marginX: "10px" }}
+              <Typography
+                variant="regular"
+                component="div"
+                sx={{
+                  flexGrow: 1,
+                  color: "black",
+                  marginX: "10px",
+                }}
+              >
+                Pictures
+              </Typography>
+            </Box>
+            <Box
+              sx={{
+                width: "80px",
+                height: "35px",
+                borderRadius: "10px",
+                alignContent: "center",
+                cursor: "pointer",
+                "&:hover": {
+                  backgroundColor: theme.colors.veryGray100,
+                },
+              }}
             >
-              Review
-            </Typography>
-            <Typography
-              variant="regular"
-              component="div"
-              sx={{ flexGrow: 1, color: "black", marginX: "10px" }}
+              <Typography
+                variant="regular"
+                component="div"
+                sx={{
+                  flexGrow: 1,
+                  color: "black",
+                  marginX: "10px",
+                }}
+              >
+                Review
+              </Typography>
+            </Box>
+
+            <Box
+              sx={{
+                width: "60px",
+                height: "35px",
+                borderRadius: "10px",
+                alignContent: "center",
+                cursor: "pointer",
+                "&:hover": {
+                  backgroundColor: theme.colors.veryGray100,
+                },
+              }}
             >
-              Tips
-            </Typography>
-            <Typography
-              variant="regular"
-              component="div"
-              sx={{ flexGrow: 1, color: "black", marginX: "10px" }}
+              <Typography
+                variant="regular"
+                component="div"
+                sx={{
+                  flexGrow: 1,
+                  color: "black",
+                  marginX: "10px",
+                }}
+              >
+                Tips
+              </Typography>
+            </Box>
+            <Box
+              sx={{
+                width: "150px",
+                height: "35px",
+                borderRadius: "10px",
+                alignContent: "center",
+                cursor: "pointer",
+                "&:hover": {
+                  backgroundColor: theme.colors.veryGray100,
+                },
+              }}
             >
-              About this page
-            </Typography>
+              <Typography
+                variant="regular"
+                component="div"
+                sx={{
+                  flexGrow: 1,
+                  color: "black",
+                  marginX: "10px",
+                }}
+              >
+                About This Page
+              </Typography>
+            </Box>
           </Box>
         </Toolbar>
       </AppBar>

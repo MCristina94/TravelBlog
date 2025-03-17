@@ -1,6 +1,8 @@
 import { createTheme, ThemeProvider } from "@mui/material";
 import AppAppBar from "./Components/AppBar";
 import { theme } from "./style/theme";
+import { Route, Routes } from "react-router-dom";
+import Home from "./Pages/Home";
 
 function App() {
   const themeMUI = createTheme({
@@ -78,6 +80,9 @@ function App() {
     <>
       <ThemeProvider theme={themeMUI}>
         <AppAppBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
       </ThemeProvider>
     </>
   );
