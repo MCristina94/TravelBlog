@@ -4,6 +4,7 @@ import { theme } from "./style/theme";
 import { Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home";
 import Footer from "./Components/Footer/Footer";
+import Pictures from "./Pages/Pictures";
 
 function App() {
   const themeMUI = createTheme({
@@ -83,6 +84,7 @@ function App() {
         <AppAppBar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/pictures" element={<Pictures />} />
         </Routes>
         <Footer />
       </ThemeProvider>

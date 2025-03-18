@@ -4,8 +4,10 @@ import AppBar from "@mui/material/AppBar";
 import { IconButton, Toolbar, Typography } from "@mui/material";
 import logoAppBar from "../../assets/images/logoMontain.png";
 import { theme } from "../../style/theme";
+import { useNavigate } from "react-router-dom";
 
 const AppAppBar = () => {
+  const navigate = useNavigate();
   return (
     <Box
       sx={{
@@ -62,6 +64,7 @@ const AppAppBar = () => {
                   backgroundColor: theme.colors.veryGray100,
                 },
               }}
+              onClick={() => navigate("/pictures")}
             >
               <Typography
                 variant="regular"
