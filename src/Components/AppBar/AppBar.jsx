@@ -38,21 +38,28 @@ const AppAppBar = () => {
               alignItems: "center",
             }}
           >
-            <IconButton edge="start">
-              <img src={logoAppBar} alt="logo" style={{ width: 40 }} />
-            </IconButton>
-            <Typography
-              variant="h6"
-              component="div"
-              sx={{
-                flexGrow: 1,
-                color: theme.colors.alernateGreen,
-                fontWeight: theme.fonts.weight.bold,
-                marginX: "10px",
-              }}
+            <Box
+              sx={{ display: "flex", flexDirection: "row", cursor: "pointer" }}
+              onClick={() => navigate("/")}
             >
-              Travel's Blog
-            </Typography>
+              <IconButton edge="start">
+                <img src={logoAppBar} alt="logo" style={{ width: 40 }} />
+              </IconButton>
+              <Typography
+                variant="h6"
+                component="div"
+                sx={{
+                  flexGrow: 1,
+                  color: theme.colors.alernateGreen,
+                  fontWeight: theme.fonts.weight.bold,
+                  marginX: "10px",
+                  alignContent: "center",
+                }}
+              >
+                Travel's Blog
+              </Typography>
+            </Box>
+
             <Box
               sx={{
                 width: "80px",
