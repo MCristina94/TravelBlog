@@ -1,8 +1,9 @@
 import { createTheme, ThemeProvider } from "@mui/material";
-import AppAppBar from "./Components/AppBar";
+import AppAppBar from "./Components/AppBar/AppBar";
 import { theme } from "./style/theme";
 import { Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   const themeMUI = createTheme({
@@ -83,6 +84,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>
+        <Footer />
       </ThemeProvider>
     </>
   );

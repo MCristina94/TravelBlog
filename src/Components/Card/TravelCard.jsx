@@ -43,19 +43,6 @@ const TravelCard = ({ height, width, margin, ...rest }) => {
           Lizards are a widespread group of squamate reptiles, with over 6,000
           species, ranging across all continents except Antarctica
         </Typography>
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "row",
-            marginY: "20px",
-          }}
-        >
-          <LocationOnIcon />
-          <Typography variant="xs" sx={{ alignContent: "center" }}>
-            {" "}
-            see on google maps{" "}
-          </Typography>
-        </Box>
       </CardContent>
     </CustomCard>
   );

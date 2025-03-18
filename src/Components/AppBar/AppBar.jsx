@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import AppBar from "@mui/material/AppBar";
 import { IconButton, Toolbar, Typography } from "@mui/material";
-import logoAppBar from "../assets/images/logoMontain.png";
-import { theme } from "../style/theme";
+import logoAppBar from "../../assets/images/logoMontain.png";
+import { theme } from "../../style/theme";
 
 const AppAppBar = () => {
   return (
