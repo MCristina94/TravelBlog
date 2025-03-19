@@ -28,8 +28,9 @@ const Pictures = () => {
     "Zurich",
   ];
   const [photosData, setPhotosData] = useState([]);
-  const [search, setSearch] = useState("");
   const [loading, setLoading] = useState(true);
+  const [placeSearch, setPlaceSearch] = useState("");
+  const [allSearchedPlace, setAllSearchedPlace] = useState([]);
 
   const API_KEY = import.meta.env.VITE_PEXELS_API_KEY;
 
@@ -65,6 +66,45 @@ const Pictures = () => {
     setPhotosData(allPhotos);
     setLoading(false);
   };
+
+  const fetchPhotoSearch = async () => {
+    const searchedPhotos = [];
+    try {
+      const res = await axios.get(`https://api.pexels.com/v1/search`, {
+        headers: {
+          Authorization: API_KEY,
+        },
+        params: {
+          query: `city of ${placeSearch}`,
+          per_page: 10,
+        },
+      });
+      if (res.data.photos.length > 0) {
+        res.data.photos.forEach((photo) => {
+          searchedPhotos.push({
+            placeSearch,
+            photoUrl: photo.src.large,
+          });
+        });
+      }
+    } catch (err) {
+      console.error(err);
+    }
+    setAllSearchedPlace(searchedPhotos);
+    setLoading(false);
+  };
+
+  const handleInputChange = (event) => {
+    setPlaceSearch(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log("Buscando:", placeSearch);
+    fetchPhotoSearch();
+  };
+  console.log(allSearchedPlace);
+
   return (
     <Box sx={{ width: "80%", margin: "0 auto", paddingTop: "80px" }}>
       <Typography variant="h2" sx={{ marginY: "20px" }}>
@@ -80,6 +120,7 @@ const Pictures = () => {
       >
         <Paper
           component="form"
+          onSubmit={handleSubmit}
           sx={{
             display: "flex",
             alignItems: "center",
@@ -88,34 +129,73 @@ const Pictures = () => {
             mx: "auto",
           }}
         >
-          <InputBase sx={{ width: "90%" }} placeholder="Search pictures" />
-          <IconButton type="button" sx={{ p: "10px" }} aria-label="search">
+          <InputBase
+            sx={{ width: "90%" }}
+            placeholder="Search pictures"
+            value={placeSearch}
+            onChange={handleInputChange}
+          />
+          <IconButton type="submit" sx={{ p: "10px" }} aria-label="search">
             <SearchIcon />
           </IconButton>
         </Paper>
         <Typography variant="h6">
-          You can search pictures of different countries
+          You can search pictures of different countries or cities.
+        </Typography>
+        <Typography variant="xs">
+          In results you will see photos of trips to in that place.
         </Typography>
       </Box>
+      {/* esto es prueba */}
+      {allSearchedPlace.length > 0 && (
+        <Box
+          display="flex"
+          flexWrap="wrap"
+          justifyContent="center"
+          gap={2}
+          mt={4}
+        >
+          {loading ? (
+            <SkeletonPicture />
+          ) : (
+            allSearchedPlace.map((photo, index) => (
+              <Box key={index} p={1}>
+                <img
+                  src={photo.photoUrl}
+                  alt={photo.placeSearch}
+                  style={{
+                    width: "auto",
+                    height: "300px",
+                  }}
+                />
+              </Box>
+            ))
+          )}
+        </Box>
+      )}
 
-      <Box display="flex" flexWrap="wrap" justifyContent="center" gap={2}>
-        {loading ? (
-          <SkeletonPicture />
-        ) : (
-          photosData.map((photo, index) => (
-            <Box key={index} p={1}>
-              <img
-                src={photo.photoUrl}
-                alt={photo.city}
-                style={{
-                  width: "auto",
-                  height: "300px",
-                }}
-              />
-            </Box>
-          ))
-        )}
-      </Box>
+      {allSearchedPlace.length > 0 ? (
+        <Box />
+      ) : (
+        <Box display="flex" flexWrap="wrap" justifyContent="center" gap={2}>
+          {loading ? (
+            <SkeletonPicture />
+          ) : (
+            photosData.map((photo, index) => (
+              <Box key={index} p={1}>
+                <img
+                  src={photo.photoUrl}
+                  alt={photo.city}
+                  style={{
+                    width: "auto",
+                    height: "300px",
+                  }}
+                />
+              </Box>
+            ))
+          )}
+        </Box>
+      )}
     </Box>
   );
 };
