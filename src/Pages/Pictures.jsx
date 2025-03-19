@@ -1,6 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import SkeletonPicture from "../Components/SkeletonPicture/SkeletonPicture";
 
 const Pictures = () => {
   const cities = [
@@ -20,6 +21,7 @@ const Pictures = () => {
   ];
   const [photosData, setPhotosData] = useState([]);
   const [search, setSearch] = useState("");
+  const [loading, setLoading] = useState(true);
 
   const API_KEY = import.meta.env.VITE_PEXELS_API_KEY;
 
@@ -50,12 +52,11 @@ const Pictures = () => {
       }
 
       setPhotosData(allPhotos);
+      setLoading(false);
     };
 
     fetchPhotos();
   }, []);
-
-  console.log(photosData);
 
   return (
     <Box sx={{ width: "80%", margin: "0 auto", paddingTop: "80px" }}>
@@ -63,18 +64,22 @@ const Pictures = () => {
         Photo Gallery
       </Typography>
       <Box display="flex" flexWrap="wrap" justifyContent="center" gap={2}>
-        {photosData.map((photo, index) => (
-          <Box key={index} p={1}>
-            <img
-              src={photo.photoUrl}
-              alt={photo.city}
-              style={{
-                width: "auto",
-                height: "300px",
-              }}
-            />
-          </Box>
-        ))}
+        {loading ? (
+          <SkeletonPicture />
+        ) : (
+          photosData.map((photo, index) => (
+            <Box key={index} p={1}>
+              <img
+                src={photo.photoUrl}
+                alt={photo.city}
+                style={{
+                  width: "auto",
+                  height: "300px",
+                }}
+              />
+            </Box>
+          ))
+        )}
       </Box>
     </Box>
   );
