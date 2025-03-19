@@ -1,11 +1,4 @@
-import {
-  Box,
-  IconButton,
-  InputBase,
-  Paper,
-  TextField,
-  Typography,
-} from "@mui/material";
+import { Box, IconButton, InputBase, Paper, Typography } from "@mui/material";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import SkeletonPicture from "../Components/SkeletonPicture/SkeletonPicture";
@@ -100,10 +93,8 @@ const Pictures = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("Buscando:", placeSearch);
     fetchPhotoSearch();
   };
-  console.log(allSearchedPlace);
 
   return (
     <Box sx={{ width: "80%", margin: "0 auto", paddingTop: "80px" }}>
@@ -146,7 +137,7 @@ const Pictures = () => {
           In results you will see photos of trips to in that place.
         </Typography>
       </Box>
-      {/* esto es prueba */}
+
       {allSearchedPlace.length > 0 && (
         <Box
           display="flex"

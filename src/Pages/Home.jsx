@@ -4,7 +4,6 @@ import TravelCard from "../Components/Card/TravelCard";
 import data from "../utils/Data.json";
 const Home = () => {
   const cities = data.cities;
-  console.log(cities);
   return (
     <Box
       sx={{
