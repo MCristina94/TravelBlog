@@ -87,7 +87,7 @@ const AppAppBar = () => {
             </Box>
             <Box
               sx={{
-                width: "80px",
+                width: "200px",
                 height: "35px",
                 borderRadius: "10px",
                 alignContent: "center",
@@ -96,6 +96,7 @@ const AppAppBar = () => {
                   backgroundColor: theme.colors.veryGray100,
                 },
               }}
+              onClick={() => navigate("/info-countries")}
             >
               <Typography
                 variant="regular"
@@ -106,7 +107,7 @@ const AppAppBar = () => {
                   marginX: "10px",
                 }}
               >
-                Review
+                Countries Information
               </Typography>
             </Box>
 

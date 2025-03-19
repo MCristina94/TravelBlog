@@ -19,7 +19,7 @@ const TravelCard = ({
 }) => {
   return (
     <CustomCard height={height} width={width} {...rest}>
-      <CardMedia sx={{ height: "250px" }} image={photo} title="foto ciudad" />
+      <CardMedia sx={{ height: "250px" }} image={photo} title="city photo" />
       <CardContent>
         <Typography variant="h4" sx={{ marginBottom: "5px" }}>
           {city}

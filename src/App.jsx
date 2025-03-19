@@ -5,6 +5,7 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home";
 import Footer from "./Components/Footer/Footer";
 import Pictures from "./Pages/Pictures";
+import InfoCountries from "./Pages/InfoCountries";
 
 function App() {
   const themeMUI = createTheme({
@@ -85,6 +86,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/pictures" element={<Pictures />} />
+          <Route path="/info-countries" element={<InfoCountries />} />
         </Routes>
         <Footer />
       </ThemeProvider>
