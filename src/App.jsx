@@ -6,6 +6,7 @@ import Home from "./Pages/Home";
 import Footer from "./Components/Footer/Footer";
 import Pictures from "./Pages/Pictures";
 import InfoCountries from "./Pages/InfoCountries";
+import AboutPage from "./Pages/AboutPage";
 
 function App() {
   const themeMUI = createTheme({
@@ -87,6 +88,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/pictures" element={<Pictures />} />
           <Route path="/info-countries" element={<InfoCountries />} />
+          <Route path="/about-page" element={<AboutPage />} />
         </Routes>
         <Footer />
       </ThemeProvider>

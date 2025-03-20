@@ -110,31 +110,6 @@ const AppAppBar = () => {
                 Countries Information
               </Typography>
             </Box>
-
-            <Box
-              sx={{
-                width: "60px",
-                height: "35px",
-                borderRadius: "10px",
-                alignContent: "center",
-                cursor: "pointer",
-                "&:hover": {
-                  backgroundColor: theme.colors.veryGray100,
-                },
-              }}
-            >
-              <Typography
-                variant="regular"
-                component="div"
-                sx={{
-                  flexGrow: 1,
-                  color: "black",
-                  marginX: "10px",
-                }}
-              >
-                Tips
-              </Typography>
-            </Box>
             <Box
               sx={{
                 width: "150px",
@@ -155,6 +130,7 @@ const AppAppBar = () => {
                   color: "black",
                   marginX: "10px",
                 }}
+                onClick={() => navigate("/about-page")}
               >
                 About This Page
               </Typography>
