@@ -1,8 +1,6 @@
 import {
   Box,
   Button,
-  IconButton,
-  InputBase,
   MenuItem,
   Paper,
   TextField,
@@ -17,8 +15,7 @@ import SearchIcon from "@mui/icons-material/Search";
 const InfoCountries = () => {
   const [countriesData, setCountriesData] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [countrieSearch, setCountrieSearch] = useState("");
-  const [searchedCountrie, setSearchedCountrie] = useState({});
+  const [searchedCountrie, setSearchedCountrie] = useState([]);
   const typeSearch = [
     { value: "lang", label: "Languages" },
     { value: "name", label: "Name of the country" },
@@ -28,6 +25,8 @@ const InfoCountries = () => {
       label: "Capital City",
     },
   ];
+  const [selectedOption, setSelectedOption] = useState("lang");
+  const [description, setDescription] = useState("");
 
   useEffect(() => {
     fetchCountries();
@@ -47,7 +46,30 @@ const InfoCountries = () => {
     }
   };
 
-  console.log(countriesData);
+  const fetchCountriesSearch = async () => {
+    try {
+      const res = await axios.get(
+        `https://restcountries.com/v3.1/${selectedOption}/${description}`
+      );
+      if (res.data.length > 0) {
+        const firstTen = res.data.slice(0, 12);
+        setSearchedCountrie(firstTen);
+      }
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleSearch = () => {
+    console.log("Option selected:", selectedOption);
+    console.log("Description:", description);
+
+    fetchCountriesSearch();
+  };
+
+  console.log(searchedCountrie);
 
   return (
     <Box
@@ -94,6 +116,8 @@ const InfoCountries = () => {
             label="Options to search"
             defaultValue="lang"
             helperText="Choose an option and "
+            value={selectedOption}
+            onChange={(e) => setSelectedOption(e.target.value)}
             sx={{ width: "100%" }}
           >
             {typeSearch.map((option) => (
@@ -104,19 +128,64 @@ const InfoCountries = () => {
           </TextField>
           <TextField
             required
-            id="outlined-required"
+            id="descriptionForSearch"
             label="Describe for search"
-            helperText="Type for search"
+            helperText="Describes the keyword for the search"
             placeholder="Example: spanish"
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
             sx={{ width: "100%" }}
           />
-          <Button endIcon={<SearchIcon />} variant="outlined">
+          <Button
+            endIcon={<SearchIcon />}
+            variant="outlined"
+            onClick={handleSearch}
+          >
             Search
           </Button>
         </Paper>
       </Box>
-
-      {countriesData.length > 0 && (
+      {searchedCountrie.length > 0 && (
+        <Box
+          sx={{
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "space-between",
+            gap: 3,
+          }}
+        >
+          {loading ? (
+            <SkeletonInfoCountries />
+          ) : (
+            searchedCountrie.map((country, index) => (
+              <CardCountries
+                key={index}
+                nameCountry={country.name.common}
+                flag={country.flags.svg}
+                capital={country.capital ? country.capital[0] : "No info"}
+                continent={country.continents[0]}
+                timeZone={country.timezones}
+                locationMap={country.maps.googleMaps}
+                demonym={
+                  country.demonyms?.eng
+                    ? `${country.demonyms.eng.m} / ${country.demonyms.eng.f}`
+                    : "No info"
+                }
+                languages={
+                  country.languages
+                    ? Object.values(country.languages).join(", ")
+                    : "No info"
+                }
+                height="500px"
+                width="300px"
+              />
+            ))
+          )}
+        </Box>
+      )}
+      {searchedCountrie.length > 0 ? (
+        <Box />
+      ) : (
         <Box
           sx={{
             display: "flex",
