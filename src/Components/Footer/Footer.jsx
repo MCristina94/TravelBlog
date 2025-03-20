@@ -5,6 +5,7 @@ import { theme } from "../../style/theme";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import ContactPageIcon from "@mui/icons-material/ContactPage";
+import MyIcon from "../../assets/images/MyIcon.png";
 
 const Footer = () => {
   return (
@@ -106,8 +107,10 @@ const Footer = () => {
             },
           }}
         >
-          <ContactPageIcon
-            sx={{ fontSize: "20px", color: theme.colors.black }}
+          <img
+            src={MyIcon}
+            alt="M icon"
+            style={{ width: "25px", height: "auto" }}
           />
         </Button>
       </Box>
