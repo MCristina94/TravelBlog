@@ -149,6 +149,7 @@ const Pictures = () => {
               In results you will see photos of trips to in that place.
             </Typography>
           </Box>
+
           {allSearchedPlace.length > 0 && (
             <Box
               display="flex"

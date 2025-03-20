@@ -4,7 +4,7 @@ import { Box } from "@mui/material";
 export const CustomSkeleton = styled(Box)`
   && {
     width: 90%;
-    margin: 20px;
+    margin: 0 auto;
     padding: 16px;
   }
 `;
