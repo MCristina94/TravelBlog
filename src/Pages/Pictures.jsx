@@ -109,7 +109,7 @@ const Pictures = () => {
   return (
     <>
       {isMobile ? (
-        <Box sx={{ width: "80%", margin: "0 auto", paddingTop: "80px" }}>
+        <Box sx={{ width: "80%", margin: "0 auto", paddingTop: "70px" }}>
           <Typography variant="h2" sx={{ marginY: "20px" }}>
             Photo Gallery
           </Typography>
@@ -206,7 +206,7 @@ const Pictures = () => {
           )}
         </Box>
       ) : (
-        <Box sx={{ width: "80%", margin: "0 auto", paddingTop: "80px" }}>
+        <Box sx={{ width: "80%", margin: "0 auto", paddingTop: "70px" }}>
           <Typography variant="h2" sx={{ marginY: "20px" }}>
             Photo Gallery
           </Typography>
