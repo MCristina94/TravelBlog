@@ -162,111 +162,121 @@ const AppAppBar = () => {
             <Toolbar>
               <Box
                 sx={{
-                  display: "flex ",
-                  marginLeft: "5px",
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "space-between",
+                  width: "100%",
                   alignItems: "center",
                 }}
               >
                 <Box
                   sx={{
-                    display: "flex",
-                    flexDirection: "row",
-                    cursor: "pointer",
+                    display: "flex ",
+                    marginLeft: "5px",
+                    alignItems: "center",
                   }}
-                  onClick={() => navigate("/")}
                 >
-                  <IconButton edge="start">
-                    <img src={logoAppBar} alt="logo" style={{ width: 40 }} />
-                  </IconButton>
-                  <Typography
-                    variant="h6"
-                    component="div"
+                  <Box
                     sx={{
-                      flexGrow: 1,
-                      color: theme.colors.alernateGreen,
-                      fontWeight: theme.fonts.weight.bold,
-                      marginX: "10px",
-                      alignContent: "center",
+                      display: "flex",
+                      flexDirection: "row",
+                      cursor: "pointer",
                     }}
+                    onClick={() => navigate("/")}
                   >
-                    Travel's Blog
-                  </Typography>
-                </Box>
+                    <IconButton edge="start">
+                      <img src={logoAppBar} alt="logo" style={{ width: 40 }} />
+                    </IconButton>
+                    <Typography
+                      variant="h6"
+                      component="div"
+                      sx={{
+                        flexGrow: 1,
+                        color: theme.colors.alernateGreen,
+                        fontWeight: theme.fonts.weight.bold,
+                        marginX: "10px",
+                        alignContent: "center",
+                      }}
+                    >
+                      Travel's Blog
+                    </Typography>
+                  </Box>
 
-                <Box
-                  sx={{
-                    width: "80px",
-                    height: "35px",
-                    borderRadius: "10px",
-                    alignContent: "center",
-                    cursor: "pointer",
-                    "&:hover": {
-                      backgroundColor: theme.colors.veryGray100,
-                    },
-                  }}
-                  onClick={() => navigate("/pictures")}
-                >
-                  <Typography
-                    variant="regular"
-                    component="div"
+                  <Box
                     sx={{
-                      flexGrow: 1,
-                      color: "black",
-                      marginX: "10px",
+                      width: "80px",
+                      height: "35px",
+                      borderRadius: "10px",
+                      alignContent: "center",
+                      cursor: "pointer",
+                      "&:hover": {
+                        backgroundColor: theme.colors.veryGray100,
+                      },
+                    }}
+                    onClick={() => navigate("/pictures")}
+                  >
+                    <Typography
+                      variant="regular"
+                      component="div"
+                      sx={{
+                        flexGrow: 1,
+                        color: "black",
+                        marginX: "10px",
+                      }}
+                    >
+                      Pictures
+                    </Typography>
+                  </Box>
+                  <Box
+                    sx={{
+                      width: "200px",
+                      height: "35px",
+                      borderRadius: "10px",
+                      alignContent: "center",
+                      cursor: "pointer",
+                      "&:hover": {
+                        backgroundColor: theme.colors.veryGray100,
+                      },
+                    }}
+                    onClick={() => navigate("/info-countries")}
+                  >
+                    <Typography
+                      variant="regular"
+                      component="div"
+                      sx={{
+                        flexGrow: 1,
+                        color: "black",
+                        marginX: "10px",
+                      }}
+                    >
+                      Countries Information
+                    </Typography>
+                  </Box>
+                  <Box
+                    sx={{
+                      width: "150px",
+                      height: "35px",
+                      borderRadius: "10px",
+                      alignContent: "center",
+                      cursor: "pointer",
+                      "&:hover": {
+                        backgroundColor: theme.colors.veryGray100,
+                      },
                     }}
                   >
-                    Pictures
-                  </Typography>
-                </Box>
-                <Box
-                  sx={{
-                    width: "200px",
-                    height: "35px",
-                    borderRadius: "10px",
-                    alignContent: "center",
-                    cursor: "pointer",
-                    "&:hover": {
-                      backgroundColor: theme.colors.veryGray100,
-                    },
-                  }}
-                  onClick={() => navigate("/info-countries")}
-                >
-                  <Typography
-                    variant="regular"
-                    component="div"
-                    sx={{
-                      flexGrow: 1,
-                      color: "black",
-                      marginX: "10px",
-                    }}
-                  >
-                    Countries Information
-                  </Typography>
-                </Box>
-                <Box
-                  sx={{
-                    width: "150px",
-                    height: "35px",
-                    borderRadius: "10px",
-                    alignContent: "center",
-                    cursor: "pointer",
-                    "&:hover": {
-                      backgroundColor: theme.colors.veryGray100,
-                    },
-                  }}
-                >
-                  <Typography
-                    variant="regular"
-                    component="div"
-                    sx={{
-                      flexGrow: 1,
-                      color: "black",
-                      marginX: "10px",
-                    }}
-                    onClick={() => navigate("/about-page")}
-                  >
-                    About This Page
-                  </Typography>
+                    <Typography
+                      variant="regular"
+                      component="div"
+                      sx={{
+                        flexGrow: 1,
+                        color: "black",
+                        marginX: "10px",
+                      }}
+                      onClick={() => navigate("/about-page")}
+                    >
+                      About This Page
+                    </Typography>
+                  </Box>
                 </Box>
               </Box>
             </Toolbar>
